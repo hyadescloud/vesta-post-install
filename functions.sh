@@ -19,7 +19,7 @@ php_fpm_install() {
 
     echo "================================================= Installing php$VERSION ================================================="
     # Install php-fpm depending on the version
-    apt-get install php$VERSION-apcu php$VERSION-mbstring php$VERSION-bcmath php$VERSION-cli php$VERSION-curl php$VERSION-fpm php$VERSION-gd php$VERSION-intl php$VERSION-mysql php$VERSION-soap php$VERSION-xml php$VERSION-zip php$VERSION-memcache php$VERSION-memcached php$VERSION-zip php$VERSION-gmp
+    apt-get install -y php$VERSION-apcu php$VERSION-mbstring php$VERSION-bcmath php$VERSION-cli php$VERSION-curl php$VERSION-fpm php$VERSION-gd php$VERSION-intl php$VERSION-mysql php$VERSION-soap php$VERSION-xml php$VERSION-zip php$VERSION-memcache php$VERSION-memcached php$VERSION-zip php$VERSION-gmp
     update-rc.d php$VERSION-fpm defaults
      echo "================================================= Updating apache ================================================="
     a2enconf php$VERSION-fpm
