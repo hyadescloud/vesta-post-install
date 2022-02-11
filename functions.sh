@@ -9,6 +9,7 @@ update_template_dir() {
     rm -rf /usr/local/vesta/data/templates/web/$PACKAGE/*
     git clone $GIT_REPO /usr/local/vesta/data/templates/web/$PACKAGE/
     git checkout stable
+    chmod a+x /usr/local/vesta/data/templates/web/$PACKAGE/*.sh
 
 }
 
