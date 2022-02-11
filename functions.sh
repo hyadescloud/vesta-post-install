@@ -7,7 +7,7 @@ update_template_dir() {
     cd /usr/local/vesta/data/templates/web/
     zip -r $PACKAGE.zip $PACKAGE/
     rm -rf /usr/local/vesta/data/templates/web/$PACKAGE/*
-    rm -rf /usr/local/vesta/data/templates/web/$PACKAGE/.*
+    rm -rf /usr/local/vesta/data/templates/web/$PACKAGE/.git/
     git clone $GIT_REPO -b stable /usr/local/vesta/data/templates/web/$PACKAGE/
     chmod a+x /usr/local/vesta/data/templates/web/$PACKAGE/*.sh
 
