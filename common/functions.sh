@@ -64,3 +64,9 @@ check_php_status() {
 
     check_status "php$php_vers-fpm"
 }
+
+add_cron() {
+    CRON_DATA=$1
+
+    (crontab -l 2>/dev/null; echo $CRON_DATA) | crontab -
+}
