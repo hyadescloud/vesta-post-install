@@ -10,8 +10,8 @@ apt-get upgrade -y
 echo "Installing necessary packages"
 apt-get install git zip -y
 
-apt-get update
-apt install apt-transport-https ca-certificates
+apt-get update -y
+apt install -y apt-transport-https ca-certificates
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 
 apt-get update
