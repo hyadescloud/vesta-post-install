@@ -31,3 +31,13 @@ php_fpm_install() {
 
     echo "================================================= php$VERSION installed ================================================="
 }
+
+restore_user() {
+    f=$1
+
+    FILE=$(basename $f)
+    USER=$(echo $FILE | cut -f1 -d".")
+    echo "v-restore-user $USER $FILE"
+    #v-restore-user $USER $FILE
+
+}
