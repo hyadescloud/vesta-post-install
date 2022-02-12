@@ -67,6 +67,9 @@ check_php_status() {
 
 add_cron() {
     CRON_DATA=$1
+    DESCRIPTION=$2
 
-    (crontab -l 2>/dev/null; echo $CRON_DATA) | crontab -
+    echo $2
+    
+    (crontab -l 2>/dev/null; echo "$CRON_DATA") | crontab -
 }
