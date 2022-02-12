@@ -38,6 +38,6 @@ restore_user() {
     FILE=$(basename $f)
     USER=$(echo $FILE | cut -f1 -d".")
     echo "v-restore-user $USER $FILE"
-    v-restore-user $USER $FILE * * * * no no no
+    v-restore-user $USER $FILE '*' '*' '*' '*' 'no' 'no' 'no'
 
 }
