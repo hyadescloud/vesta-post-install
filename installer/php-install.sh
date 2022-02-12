@@ -11,6 +11,7 @@ do
 done
 
 
+a2dismod php5.6
 a2dismod php7.0
 a2enmod php7.4
 
