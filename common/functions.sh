@@ -34,10 +34,11 @@ php_fpm_install() {
 
 restore_user() {
     f=$1
-
+    echo "================================================= Restoring user ================================================="
     FILE=$(basename $f)
     USER=$(echo $FILE | cut -f1 -d".")
     echo "v-restore-user $USER $FILE"
     v-restore-user $USER $FILE '*' '*' '*' '*' 'no' 'no' 'no'
+    echo "================================================= $USER restored ================================================="
 
 }
