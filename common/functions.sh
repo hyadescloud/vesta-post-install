@@ -5,7 +5,14 @@ update_template_dir() {
     GIT_REPO=$2
 
     cd /usr/local/vesta/data/templates/web/
-    zip -r $PACKAGE.zip $PACKAGE/
+    
+    # if the directory doesn't contain .git dir
+    # That means you run this for the first so lets backups
+    if [ ! -d "/usr/local/vesta/data/templates/web/$PACKAGE/.git" ]; then
+        zip -r $PACKAGE.zip $PACKAGE/
+        
+    fi
+
     rm -rf /usr/local/vesta/data/templates/web/$PACKAGE/*
     rm -rf /usr/local/vesta/data/templates/web/$PACKAGE/.git/
     git clone $GIT_REPO -b stable /usr/local/vesta/data/templates/web/$PACKAGE/
