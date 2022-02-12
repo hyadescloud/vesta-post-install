@@ -1,4 +1,4 @@
-
+#!/bin/sh
 
 DOWNLOAD_DIR=~/downloads
 TARGET_DIR=/usr/share/phpmyadmin-latest
