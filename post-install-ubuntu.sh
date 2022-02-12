@@ -1,6 +1,7 @@
 #!/bin/sh
 
-source functions.sh;
+source common/functions.sh;
+
 
 echo "Updating system"
 apt-get update -y 
@@ -9,8 +10,15 @@ apt-get upgrade -y
 echo "Installing necessary packages"
 apt-get install git zip -y
 
+apt-get update
+apt install apt-transport-https ca-certificates
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+
+apt-get update
+a2enmod proxy_fcgi setenvif
+
 echo "Installing necessary packages"
-bash php-install.sh
+bash installer/php-install.sh
 
 echo "Setting up new templates"
 
