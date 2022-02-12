@@ -21,8 +21,8 @@ tar xvf phpMyAdmin-latest-all-languages.tar.gz --strip-components=1 -C $TARGET_D
 cp $TARGET_DIR/config.sample.inc.php $TARGET_DIR/config.inc.php
 nano $TARGET_DIR/config.inc.php
 
-
-chmod 660 $TARGET_DIR/config.inc.php
 chown -R root:root $TARGET_DIR
+chmod 664 $TARGET_DIR/config.inc.php
+
 
 systemctl restart apache2

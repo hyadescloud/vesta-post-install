@@ -9,3 +9,9 @@ for version in ${php_versions[@]}
 do
   php_fpm_install $version
 done
+
+
+a2dismod php7.0
+a2enmod php7.4
+
+update-alternatives --set php /usr/bin/php7.4
