@@ -23,3 +23,6 @@ update_template_dir nginx https://gitlab.hyadescloud.com/hyadescloud/vesta-nginx
 
 echo "Adding cron jobs"
 bash cron/add-crons.sh
+
+echo "Checking php status"
+bash check-php-status.sh
