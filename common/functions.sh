@@ -36,6 +36,8 @@ php_fpm_install() {
     cp -r /etc/php/$VERSION/ /root/vst_install_backups/php$VERSION/
     rm -f /etc/php/$VERSION/fpm/pool.d/*
 
+    echo "Dont fotget the rebuild web domains in vesta panel !"
+
     echo "================================================= php$VERSION installed ================================================="
 }
 
